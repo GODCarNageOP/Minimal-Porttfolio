@@ -71,6 +71,7 @@ export const FloatingNav = ({
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)] rounded-xl"></div>
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}

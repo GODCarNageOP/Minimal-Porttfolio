@@ -3,8 +3,12 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import { FlipWords } from "./ui/FlipWords";
+import { TextRevealCard } from "./ui/TextReveal";
 
 const Hero = () => {
+  const words = ["Ideas", "Concepts", "Dreams"];
+
   return (
     <div className="pb-20 pt-36">
       {/**
@@ -43,7 +47,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Next.js
+            Welcome to my portfolio
           </p>
 
           {/**
@@ -51,14 +55,29 @@ const Hero = () => {
            *
            *  change md:text-6xl, add more responsive code
            */}
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             words="Transforming Concepts into Seamless User Experiences"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Adrian, a Next.js Developer based in Croatia.
-          </p>
+          /> */}
+          <div className="flex justify-center items-center px-4 py-8 lg:py-10">
+            <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-center lg:text-start">
+              Transforming
+              <FlipWords words={words} /> <br />
+              into Smooth{" "}
+              <span className="text-blue-500 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+                User Experiences
+              </span>
+            </div>
+          </div>
+          <div className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl flex">
+            Hi! I&apos;m Yash, a {""}
+            <TextRevealCard
+              text="Web Developer"
+              revealText="Data Analyst"
+            ></TextRevealCard>
+            {""}
+            based in Boston.
+          </div>
 
           <a href="#about">
             <MagicButton
