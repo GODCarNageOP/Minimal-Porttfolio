@@ -7,7 +7,7 @@ import { FlipWords } from "./ui/FlipWords";
 import { TextRevealCard } from "./ui/TextReveal";
 
 const Hero = () => {
-  const words = ["Ideas", "Concepts", "Dreams"];
+  const words = ["Concepts", "Visions", "Designs", "Ideas", "Strategies"];
 
   return (
     <div className="pb-20 pt-36">
@@ -64,9 +64,7 @@ const Hero = () => {
               Transforming
               <FlipWords words={words} /> <br />
               into Smooth{" "}
-              <span className="text-blue-500 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-                User Experiences
-              </span>
+              <span className="text-blue-500">User Experiences</span>
             </div>
           </div>
           <div className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl flex">
